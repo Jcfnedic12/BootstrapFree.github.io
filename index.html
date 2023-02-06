@@ -24,6 +24,46 @@
     <title>Bootstrap</title>
   </head>
   <body>
+    <!-- modal -->
+    <div class="modal fade" id="modalEnroll" tabindex="-1" aria-labelledby="enrollmentTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="enrollmentTitle">Enroll now!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="input-group mb-3">
+                <label class="input-group-text bg-secondary-subtle text-dark " for="Firstname">Firstname:</label>
+                <input type="text" class="form-control" id="Firstname
+                ">
+              </div>
+              <div class="input-group mb-3">
+                <label class="input-group-text bg-secondary-subtle text-dark" for="Lastname">Lastname:</label>
+                <input type="text" class="form-control" id="Lastname
+                ">
+              </div>
+              <div class="input-group mb-3">
+                <label class="input-group-text bg-secondary-subtle text-dark" for="Age">Age:</label>
+                <input type="text" class="form-control" id="Age
+                ">
+              </div>
+              <div class="input-group mb-3">
+                <label class="input-group-text bg-secondary-subtle text-dark" for="Email">Email:</label>
+                <input type="email" class="form-control" id="Email
+                ">
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Enroll</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
       <div class="container">
@@ -67,11 +107,11 @@
               necessitatibus blanditiis ipsam atque! Debitis vitae soluta
               suscipit facilis id numquam ratione perspiciatis dolorem?
             </p>
-            <button class="btn btn-primary btn-lg">Start The Enrollment</button>
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalEnroll">Start The Enrollment</button>
           </div>
           <img
             class="img-fluid w-50 d-none d-sm-block"
-            src="/bootstrap-bootcamp-website-main/img/showcase.svg"
+            src="/showcase.svg"
             alt="showcase"
           />
         </div>
@@ -151,12 +191,12 @@
       </div>
     </section>
     <!-- learn -->
-    <section class="text-dark text-center text-sm-start pt- pt-md-5">
+    <section class="text-dark text-center text-sm-start pt- pt-md-5" id="learn">
       <div class="container pt-4 align-items-center justify-content-center p-5">
         <div class="row justify-content-between align-items-center">
           <div class="col-md d-none d-sm-block">
             <img
-              src="/bootstrap-bootcamp-website-main/img/fundamentals.svg"
+              src="/fundamentals.svg"
               alt="fundamentals"
               class="img-fluid"
             />
@@ -206,7 +246,7 @@
             </div>
             <div class="col-md d-none d-sm-block">
               <img
-                src="/bootstrap-bootcamp-website-main/img/react.svg"
+                src="/react.svg"
                 alt="ReactJs"
                 class="img-fluid"
               />
@@ -216,7 +256,7 @@
       </div>
     </section>
     <!-- Question Accordion -->
-    <section class="py-5 px-0 px-md-5">
+    <section class="py-5 px-0 px-md-5" id="question">
       <div class="container">
         <div class="h2 text-center mb-5">Frequently Ask Questions</div>
 
@@ -339,7 +379,7 @@
       </div>
     </section>
     <!-- Instructors -->
-    <section class="bg-primary text-light">
+    <section class="bg-primary text-light" id="instructors">
       <div class="container p-4 py-5">
         <div class="h2 text-center">Our Instructors</div>
         <div class="p lead text-center">
@@ -353,7 +393,7 @@
                 src="Joseph.jpg"
                 class="card-img-top align-self-center rounded-circle"
                 alt="..."
-                style="width: 150px; height: 150px"
+                style="max-width: 150px; max-height: 150px"
               />
               <div class="card-body">
                 <h5 class="card-title">Carl Smith</h5>
@@ -534,7 +574,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light p-5 position-relative">
+    <footer class="bg-dark text-light p-3 p-md-5 position-relative">
       <div class="container text-center position-relative">
         <h4 class="fw-light">© All rights reserved</h4>
 
